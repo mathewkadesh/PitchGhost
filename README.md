@@ -8,6 +8,20 @@ the room, and a draft follow-up email.
 
 It's designed to be deployed as a static site on GitHub Pages.
 
+**Live:** https://mathewkadesh.github.io/PitchGhost/
+
+## Screenshots
+
+| | |
+| --- | --- |
+| **Home** — hero, animated stats strip, and the trending-firms leaderboard | **Directory** — sector/stage breakdown charts plus ~70 filterable VC firms |
+| ![Home page](docs/screenshots/home.png) | ![Directory page](docs/screenshots/directory.png) |
+
+**Dossier** — sample dossier with fit verdict, thesis, signals rewarded /
+anti-patterns, partner profile, and a draft follow-up email:
+
+![Dossier page](docs/screenshots/dossier.png)
+
 ## How research works
 
 A static site can't hold a server-side API key, so "AI research tool" and
