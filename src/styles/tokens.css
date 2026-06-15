@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------
+   PitchGhost design tokens — "intelligence dossier" aesthetic.
+   Colour pairs below are chosen to pass WCAG AA (4.5:1) against --bg.
+   ---------------------------------------------------------------------- */
+@theme {
+  --color-bg: #0b0a08;
+  --color-panel: #15130f;
+  --color-ink: #f3ecdd;
+  --color-ink-soft: #b8ae99;
+  --color-gold: #c9a24b;
+  --color-line: #2a271f;
+  --color-ok: #6fcf97;
+  --color-warn: #e0794f;
+
+  --font-display: "Spectral", "Iowan Old Style", serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", monospace;
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --animate-scan: scan 1.1s ease-out forwards;
+  --animate-blink: blink 1.4s ease-in-out infinite;
+  --animate-cursor: cursor-blink 0.9s step-end infinite;
+}
+
+/* ----------------------------------------------------------------------
+   Light theme overrides. Deliberately unlayered (not inside @layer), so
+   these win over the @theme color variables (which Tailwind places in
+   @layer theme) regardless of selector specificity — CSS cascade layers
+   always rank unlayered rules above layered ones.
+   Same colour pairs are checked against WCAG AA (4.5:1) for text on --bg
+   and --panel.
+   ---------------------------------------------------------------------- */
+[data-theme="light"] {
+  --color-bg: #f7f4ec;
+  --color-panel: #ffffff;
+  --color-ink: #1f1d18;
+  --color-ink-soft: #6b6353;
+  --color-gold: #8a661a;
+  --color-line: #e4ded0;
+  --color-ok: #2f7d4f;
+  --color-warn: #b34e26;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="light"] .hairline-grid {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+[data-theme="light"] .scanlines::before {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02),
+    rgba(0, 0, 0, 0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+@keyframes scan {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    color-scheme: dark;
+    scrollbar-color: var(--color-gold) transparent;
+    scrollbar-width: thin;
+  }
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.7;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-bg);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  body::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: var(--color-gold);
+  }
+}
+
+@layer components {
+  /* Uppercase, letter-spaced monospace metadata labels used throughout the dossier UI. */
+  .meta-label {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.6875rem;
+    line-height: 1.4;
+  }
+
+  /* Faint hairline grid behind the hero / pages, evoking dossier graph paper. */
+  .hairline-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 128px 128px;
+  }
+
+  /* Subtle repeating scanline overlay for the hero panel. */
+  .scanlines::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.015),
+      rgba(255, 255, 255, 0.015) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+
+  /* Reveal-on-scroll "scan" effect for rows/sections. Respects reduced motion. */
+  .scan-reveal {
+    animation: scan 0.6s ease-out both;
+  }
+
+  /* Minimal markdown styling for rendered blog content. */
+  .prose-ghost h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-ink);
+  }
+
+  .prose-ghost p {
+    margin-bottom: 1rem;
+    color: var(--color-ink);
+  }
+
+  .prose-ghost ul,
+  .prose-ghost ol {
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+    color: var(--color-ink);
+  }
+
+  .prose-ghost li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose-ghost li > ol,
+  .prose-ghost li > ul {
+    margin-top: 0.5rem;
+  }
+
+  .prose-ghost strong {
+    color: var(--color-gold);
+    font-weight: 600;
+  }
+
+  .prose-ghost a {
+    color: var(--color-gold);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+  }
+
+  .prose-ghost a:hover {
+    text-decoration-color: var(--color-gold);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------------------------------------------------------------
+   Print stylesheet — used by the "Download PDF" export. Only `.print-area`
+   content (the dossier) is shown; chrome, nav, and controls are hidden.
+   ---------------------------------------------------------------------- */
+@media print {
+  body {
+    background: #ffffff;
+    color: #111111;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-area {
+    color: #111111 !important;
+    background: #ffffff !important;
+  }
+
+  .print-area * {
+    color: #111111 !important;
+    background: transparent !important;
+    border-color: #cccccc !important;
+    box-shadow: none !important;
+  }
+
+  .print-area a {
+    color: #111111 !important;
+    text-decoration: underline;
+  }
+}

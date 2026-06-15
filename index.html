@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b0a08" />
+    <meta
+      name="description"
+      content="PitchGhost — founder intelligence for the room before you walk into it. Research how a VC firm and partner think before you pitch."
+    />
+    <link rel="icon" href="/favicon.ico" />
+    <script type="text/javascript">
+      // Apply the saved/preferred theme before first paint, so there's no
+      // flash of the wrong theme. Keep this logic in sync with
+      // src/lib/themeContext.tsx#readStoredTheme.
+      (function () {
+        try {
+          var stored = window.localStorage.getItem("pitchghost:theme");
+          var theme =
+            stored === "light" || stored === "dark"
+              ? stored
+              : window.matchMedia("(prefers-color-scheme: light)").matches
+                ? "light"
+                : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+          if (theme === "light") {
+            document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#f7f4ec");
+          }
+        } catch {
+          /* localStorage unavailable; default dark theme applies */
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>PitchGhost — Founder intelligence before you pitch</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      //
+      // Restores the real path from the redirect 404.html performs, before
+      // React Router mounts, so a hard refresh on a deep link works.
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(null, "", l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

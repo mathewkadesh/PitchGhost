@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# PitchGhost
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**PitchGhost** is a founder-facing research tool: enter a VC firm (and
+optionally a partner and a one-line startup description), and it generates a
+structured intelligence dossier — what the firm actually rewards, what gets a
+"no," a profile of the partner with sourced claims, sharp questions to ask in
+the room, and a draft follow-up email.
 
-## Available Scripts
+It's designed to be deployed as a static site on GitHub Pages.
 
-In the project directory, you can run:
+## How research works
 
-### `npm start`
+A static site can't hold a server-side API key, so "AI research tool" and
+"pure static site" are normally in tension. PitchGhost resolves that with one
+research path that works for every visitor, no key or sign-in required:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Firm | What happens |
+| --- | --- |
+| One of six marquee firms with a **sample dossier** | Renders instantly from hand-written, fact-checked static data, with **zero network calls**. Labeled "Sample dossier" in the UI. |
+| Any other firm | **Live research** — calls a small Cloudflare Worker (`worker/`) that holds an Anthropic API key server-side, runs the same prompt with web search (`src/lib/prompt.ts`), and is rate-limited per IP and globally so spend has a hard ceiling. Labeled "Live research." |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The routing is a single function, `src/lib/ghost.ts#runGhost` — sample slug
+→ static JSON, otherwise → the worker. The six sample dossiers mean the
+deployed site is fully functional — including for a recruiter on a phone —
+without ever requiring secrets in this repo. Live research is powered by a
+small Cloudflare Worker (see [`worker/README.md`](worker/README.md)); if
+`VITE_GHOST_API_URL` is unset for a given build, researching a non-sample
+firm instead shows a clear "not configured yet" message pointing at the
+directory and sample dossiers, rather than a broken "Failed to fetch."
 
-### `npm test`
+## Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React 19 + Vite 7 + TypeScript** (strict)
+- **React Router 7** for `/`, `/directory`, `/blog`, `/blog/:slug`,
+  `/research/:slug`
+- **Tailwind CSS v4** (CSS-first `@theme` design tokens in
+  `src/styles/tokens.css`)
+- **Framer Motion** for entrance animations, respecting
+  `prefers-reduced-motion`
+- **Cloudflare Workers** for the live-research proxy (deployed separately,
+  see [`worker/README.md`](worker/README.md))
 
-### `npm run build`
+## Project structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+src/
+  components/        # Dossier renderer, nav, hero, forms, export buttons
+  data/              # vcDirectory.ts, sampleReports.ts (6 sample dossiers), blogPosts.ts + markdown
+  lib/
+    types.ts         # Dossier schema shared by sample and live research
+    prompt.ts        # System prompt + schema, shared with worker/
+    anthropicResponse.ts  # Response parsing, shared with worker/
+    ghost.ts         # runGhost(input) — sample dossier or live research
+    export.ts        # PDF export + "copy as markdown"
+  pages/             # Home, Directory, Blog, BlogPost, Research, NotFound
+worker/              # Cloudflare Worker for live research (deployed separately)
+public/404.html      # SPA deep-link redirect for GitHub Pages
+.github/workflows/deploy.yml  # Build + deploy to GitHub Pages
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+## Run locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run dev
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Opens at `http://localhost:5173`. The six sample dossiers work immediately
+with no configuration. To exercise live research locally, run the worker
+(`worker/README.md`) and point `VITE_GHOST_API_URL` at it.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Other scripts:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build       # tsc -b && vite build
+npm run typecheck   # tsc -b --noEmit
+npm run preview     # preview the production build locally
+```
 
-## Learn More
+## Environment variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+See `.env.example`. Only one variable is used, and it's optional:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `VITE_GHOST_API_URL` — base URL of the deployed live-research Cloudflare
+  Worker (e.g. `https://pitchghost-ghost.<subdomain>.workers.dev`). If unset,
+  researching a non-sample firm shows a friendly "not configured yet"
+  message; the sample dossiers and directory are unaffected.
 
-### Code Splitting
+No Anthropic API key is ever stored in this repo or shipped to the browser —
+the worker holds its key as a Cloudflare secret (`worker/README.md`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Pages
 
-### Analyzing the Bundle Size
+- `/` — Hero, funding-news ticker, trending-firms leaderboard, and the
+  research form
+- `/directory` — Filterable directory of VC firms (search, region, stage,
+  sector)
+- `/blog` and `/blog/:slug` — Editorial articles (rendered from markdown)
+- `/research/:slug` — The dossier itself: snapshot (with fit verdict),
+  investment thesis, signals rewarded / anti-patterns, partner profile,
+  recent activity, questions to ask, and a follow-up email draft. Exportable
+  as PDF or markdown.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the app and publishes `dist/` to GitHub Pages via
+`actions/deploy-pages`. The site is served from the root of the Pages domain
+(`base: "/"` in `vite.config.ts`), and `public/404.html` handles deep-link
+refreshes (e.g. landing directly on `/research/sequoia-capital`) using the
+[spa-github-pages](https://github.com/rafgraph/spa-github-pages) redirect
+trick.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To enable live research in the deployed build, deploy `worker/` (see its
+README), then add a `VITE_GHOST_API_URL` repository secret pointing at the
+worker URL.
 
-### Advanced Configuration
+## Disclaimer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Every generated dossier — sample or live — includes a verification
+disclaimer: this is research assistance from public information, and may be
+incomplete or out of date. Investors are individuals, not formulas.
