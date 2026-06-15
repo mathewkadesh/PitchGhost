@@ -13,10 +13,10 @@
       // path into a query string and redirects to "/", where the script in
       // index.html restores it so React Router can take over.
       //
-      // This site is served from the root of a user/org Pages domain
-      // (username.github.io), so pathSegmentsToKeep is 0. If this ever moves
-      // to a project page (username.github.io/repo-name), set this to 1.
-      var pathSegmentsToKeep = 0;
+      // This site is served from a project page
+      // (mathewkadesh.github.io/PitchGhost), so the first path segment
+      // ("PitchGhost") must be preserved.
+      var pathSegmentsToKeep = 1;
 
       var l = window.location;
       l.replace(

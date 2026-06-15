@@ -2,12 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-// Served from the root of a GitHub Pages user/org site (username.github.io)
-// or a custom domain, so base stays "/". If this ever moves to a project
-// page (username.github.io/<repo>), change this to "/<repo>/" and update
-// the router `basename` in src/main.tsx to match.
+// Served from a GitHub Pages project page (mathewkadesh.github.io/PitchGhost),
+// so assets are requested under /PitchGhost/. The router `basename` in
+// src/main.tsx and public/404.html's pathSegmentsToKeep are kept in sync
+// with this value.
 export default defineConfig({
-  base: "/",
+  base: "/PitchGhost/",
   plugins: [react(), tailwindcss()],
   server: {
     port: 5173,

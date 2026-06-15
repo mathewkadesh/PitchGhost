@@ -18,7 +18,7 @@ import type { GhostRequestInput } from "../src/lib/types";
 export interface Env {
   /** Anthropic API key. Set with `wrangler secret put ANTHROPIC_API_KEY`. */
   ANTHROPIC_API_KEY: string;
-  /** Origin of the deployed Pages site, e.g. "https://username.github.io". */
+  /** Comma-separated allowed origins, e.g. "https://username.github.io,http://localhost:5173". */
   ALLOWED_ORIGIN: string;
   /** Max requests per IP per UTC day. Defaults to 5. */
   DAILY_LIMIT_PER_IP?: string;
@@ -39,12 +39,15 @@ function jsonResponse(body: unknown, status: number, headers: Record<string, str
   });
 }
 
-function corsHeaders(env: Env): Record<string, string> {
-  // Always advertise the configured Pages origin. If the actual request
-  // came from elsewhere, the browser's CORS check will fail closed since
-  // the response origin won't match the request origin.
+function corsHeaders(env: Env, requestOrigin: string | null): Record<string, string> {
+  // ALLOWED_ORIGIN may be a comma-separated list (e.g. the deployed Pages
+  // origin plus localhost for local dev). Echo back the request's origin if
+  // it's on the list, else fall back to the first configured origin so the
+  // browser's CORS check fails closed for everyone else.
+  const allowed = env.ALLOWED_ORIGIN.split(",").map((origin) => origin.trim());
+  const allowOrigin = requestOrigin && allowed.includes(requestOrigin) ? requestOrigin : allowed[0];
   return {
-    "Access-Control-Allow-Origin": env.ALLOWED_ORIGIN,
+    "Access-Control-Allow-Origin": allowOrigin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
     "Vary": "Origin",
@@ -62,7 +65,7 @@ async function readCount(kv: KVNamespace, key: string): Promise<number> {
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
-    const headers = corsHeaders(env);
+    const headers = corsHeaders(env, request.headers.get("Origin"));
 
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers });

@@ -1,21 +1,17 @@
 # Cloudflare Worker config for the PitchGhost live-research proxy.
 #
-# Remaining deploy steps:
-#   1. npx wrangler secret put ANTHROPIC_API_KEY
-#   2. npx wrangler deploy
-#   3. Update ALLOWED_ORIGIN below once the frontend has a deployed origin
-#      (it's currently set to localhost for local testing).
-# See worker/README.md for the full walkthrough.
+# Deployed via `npx wrangler deploy`. See worker/README.md for the full
+# walkthrough.
 
 name = "pitchghost-ghost"
 main = "index.ts"
 compatibility_date = "2025-01-01"
 
 [vars]
-# Origin of the deployed Pages site (no trailing slash). Required for CORS.
-# Currently set to localhost for local testing — update to your deployed
-# frontend origin once it has one.
-ALLOWED_ORIGIN = "http://localhost:5173"
+# Comma-separated allowed origins (no trailing slash, no path — CORS only
+# checks scheme+host). Includes the deployed Pages origin and localhost for
+# local dev.
+ALLOWED_ORIGIN = "https://mathewkadesh.github.io,http://localhost:5173"
 # Per-IP and global daily request caps for /ghost.
 DAILY_LIMIT_PER_IP = "5"
 DAILY_GLOBAL_LIMIT = "200"

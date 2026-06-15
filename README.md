@@ -110,9 +110,11 @@ the worker holds its key as a Cloudflare secret (`worker/README.md`).
 
 Pushing to `main` runs [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
 which builds the app and publishes `dist/` to GitHub Pages via
-`actions/deploy-pages`. The site is served from the root of the Pages domain
-(`base: "/"` in `vite.config.ts`), and `public/404.html` handles deep-link
-refreshes (e.g. landing directly on `/research/sequoia-capital`) using the
+`actions/deploy-pages`. The site is served as a project page at
+`https://mathewkadesh.github.io/PitchGhost/` (`base: "/PitchGhost/"` in
+`vite.config.ts`, matched by the router `basename` in `src/main.tsx`), and
+`public/404.html` handles deep-link refreshes (e.g. landing directly on
+`/research/sequoia-capital`) using the
 [spa-github-pages](https://github.com/rafgraph/spa-github-pages) redirect
 trick.
 

@@ -6,7 +6,7 @@ import "./styles/tokens.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/PitchGhost">
       <App />
     </BrowserRouter>
   </StrictMode>,
