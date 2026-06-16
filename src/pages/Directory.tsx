@@ -2,7 +2,9 @@ import { lazy, Suspense, useMemo, useState } from "react";
 import { LuList, LuMap, LuSearch } from "react-icons/lu";
 import SectorIcon from "../components/SectorIcon";
 import VcRow from "../components/VcRow";
-import { regionOptions, sectorOptions, vcDirectory } from "../data/vcDirectory";
+import { sectorOptions, vcDirectory } from "../data/vcDirectory";
+
+const REGION_OPTIONS = Array.from(new Set(vcDirectory.map((v) => v.region))).sort();
 
 // Lazy-loaded: both pull in sizeable deps and are only needed on this page.
 const DirectoryStats = lazy(() => import("../components/DirectoryStats"));
@@ -94,7 +96,7 @@ export default function Directory() {
               className="rounded-md border border-line bg-panel px-3 py-2 text-ink focus-visible:border-gold"
             >
               <option>All</option>
-              {regionOptions.map((option) => (
+              {REGION_OPTIONS.map((option) => (
                 <option key={option}>{option}</option>
               ))}
             </select>

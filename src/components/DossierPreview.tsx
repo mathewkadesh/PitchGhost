@@ -93,7 +93,7 @@ export default function DossierPreview({ entry }: Props) {
             to="/directory"
             className="meta-label inline-block rounded-md border border-line px-4 py-2 text-ink-soft transition-colors hover:text-ink"
           >
-            Browse all 72 firms
+            Browse all firms
           </Link>
         </div>
       </div>

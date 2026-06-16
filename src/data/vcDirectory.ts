@@ -12,17 +12,21 @@ export const vcDirectory: VcDirectoryEntry[] = vcDirectoryData as unknown as VcD
 
 export const sectorOptions = [
   "AI/ML",
-  "Fintech",
   "SaaS",
+  "Fintech",
   "Consumer",
-  "Deep Tech",
+  "Enterprise",
   "Health",
-  "Climate",
+  "Biotech",
   "Crypto",
+  "Climate",
+  "Deep Tech",
+  "Hardware",
+  "Security",
   "Gaming",
+  "Marketplace",
+  "Dev Tools",
 ] as const;
-
-export const regionOptions = ["US", "UK/Europe", "Global"] as const;
 
 export const stageOptions = [
   "Pre-seed",
