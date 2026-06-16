@@ -1,11 +1,12 @@
 import { lazy, Suspense, useMemo, useState } from "react";
-import { LuSearch } from "react-icons/lu";
+import { LuList, LuMap, LuSearch } from "react-icons/lu";
 import SectorIcon from "../components/SectorIcon";
 import VcRow from "../components/VcRow";
 import { regionOptions, sectorOptions, vcDirectory } from "../data/vcDirectory";
 
-// Lazy-loaded: pulls in recharts, which is sizeable and only needed on this page.
+// Lazy-loaded: both pull in sizeable deps and are only needed on this page.
 const DirectoryStats = lazy(() => import("../components/DirectoryStats"));
+const VcMap = lazy(() => import("../components/VcMap"));
 
 const STAGE_ORDER = ["Pre-seed", "Seed", "Series A", "Series B", "Series C", "Growth"];
 
@@ -27,6 +28,7 @@ export default function Directory() {
   const [region, setRegion] = useState("All");
   const [stage, setStage] = useState("All");
   const [sectors, setSectors] = useState<string[]>([]);
+  const [view, setView] = useState<"list" | "map">("list");
 
   function toggleSector(sector: string) {
     setSectors((prev) => (prev.includes(sector) ? prev.filter((s) => s !== sector) : [...prev, sector]));
@@ -144,28 +146,60 @@ export default function Directory() {
         )}
       </div>
 
-      <p className="meta-label mt-8 text-ink-soft">
-        {results.length} {results.length === 1 ? "firm" : "firms"}
-      </p>
-
-      <div className="mt-2">
-        {results.map((entry, index) => (
-          <VcRow
-            key={entry.slug}
-            slug={entry.slug}
-            firm={entry.firm}
-            partner={entry.partner}
-            stage={entry.stage}
-            sectors={entry.sectors}
-            location={entry.location}
-            knownFor={entry.knownFor}
-            index={index}
-          />
-        ))}
-        {results.length === 0 && (
-          <p className="border-b border-line py-8 text-ink-soft">No firms match those filters.</p>
-        )}
+      <div className="mt-8 flex items-center justify-between">
+        <p className="meta-label text-ink-soft">
+          {results.length} {results.length === 1 ? "firm" : "firms"}
+        </p>
+        <div className="flex gap-1 rounded-full border border-line p-1">
+          <button
+            type="button"
+            onClick={() => setView("list")}
+            aria-pressed={view === "list"}
+            className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 transition-colors meta-label ${
+              view === "list" ? "bg-gold text-bg" : "text-ink-soft hover:text-ink"
+            }`}
+          >
+            <LuList className="h-3.5 w-3.5" aria-hidden="true" />
+            List
+          </button>
+          <button
+            type="button"
+            onClick={() => setView("map")}
+            aria-pressed={view === "map"}
+            className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 transition-colors meta-label ${
+              view === "map" ? "bg-gold text-bg" : "text-ink-soft hover:text-ink"
+            }`}
+          >
+            <LuMap className="h-3.5 w-3.5" aria-hidden="true" />
+            Map
+          </button>
+        </div>
       </div>
+
+      {view === "map" ? (
+        <Suspense fallback={<div className="mt-4 h-[480px] animate-pulse rounded-md border border-line bg-panel/40" />}>
+          <VcMap vcs={results} />
+        </Suspense>
+      ) : (
+        <div className="mt-2">
+          {results.map((entry, index) => (
+            <VcRow
+              key={entry.slug}
+              slug={entry.slug}
+              firm={entry.firm}
+              partner={entry.partner}
+              stage={entry.stage}
+              sectors={entry.sectors}
+              location={entry.location}
+              knownFor={entry.knownFor}
+              index={index}
+            />
+          ))}
+          {results.length === 0 && (
+            <p className="border-b border-line py-8 text-ink-soft">No firms match those filters.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
