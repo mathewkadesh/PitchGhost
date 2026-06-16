@@ -99,6 +99,10 @@ export interface VcDirectoryEntry {
   notableInvestments: string[];
   /** Rank (1-8) on the homepage "Trending intelligence targets" leaderboard. */
   trendingRank?: number;
+  /** Typical investment size per round (e.g. "$1M–$10M"). */
+  checkSize?: string;
+  /** Approximate assets under management or latest fund size. */
+  aum?: string;
 }
 
 export interface TrendingTarget {

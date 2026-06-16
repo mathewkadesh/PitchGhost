@@ -9,7 +9,9 @@
     "sectors": ["AI/ML", "Consumer", "Fintech"],
     "knownFor": "Backing category-defining companies early and staying close through every stage of scale.",
     "notableInvestments": ["Apple", "Google", "Airbnb", "Stripe", "Zoom"],
-    "trendingRank": 1
+    "trendingRank": 1,
+    "checkSize": "$100K–$150M+",
+    "aum": "$85B+ AUM"
   },
   {
     "slug": "a16z",
@@ -21,7 +23,9 @@
     "sectors": ["AI/ML", "Crypto", "Fintech"],
     "knownFor": "Thesis-driven, high-conviction bets on software eating every industry — and the infrastructure underneath it.",
     "notableInvestments": ["Coinbase", "GitHub", "Airbnb", "Databricks", "Instacart"],
-    "trendingRank": 2
+    "trendingRank": 2,
+    "checkSize": "$250K–$150M+",
+    "aum": "$42B+ AUM"
   },
   {
     "slug": "index-ventures",
@@ -33,7 +37,9 @@
     "sectors": ["SaaS", "Consumer", "Gaming"],
     "knownFor": "Founder-obsessed early conviction, with a track record of European companies that scale globally.",
     "notableInvestments": ["Revolut", "Discord", "Robinhood", "Figma", "BlaBlaCar"],
-    "trendingRank": 3
+    "trendingRank": 3,
+    "checkSize": "$1M–$30M",
+    "aum": "$4.5B+ AUM"
   },
   {
     "slug": "balderton-capital",
@@ -45,7 +51,9 @@
     "sectors": ["Deep Tech", "AI/ML", "SaaS"],
     "knownFor": "Long-term conviction in technical European founders, often the first institutional cheque.",
     "notableInvestments": ["Revolut", "Citymapper", "Tractable", "Aiven", "Lithic"],
-    "trendingRank": 4
+    "trendingRank": 4,
+    "checkSize": "£1M–£20M",
+    "aum": "$4B+ AUM"
   },
   {
     "slug": "accel",
@@ -57,7 +65,9 @@
     "sectors": ["SaaS", "Fintech", "Consumer"],
     "knownFor": "Spotting European breakout companies early and backing them through multiple stages of growth.",
     "notableInvestments": ["Spotify", "Deliveroo", "UiPath", "Wolt", "Wise"],
-    "trendingRank": 5
+    "trendingRank": 5,
+    "checkSize": "$500K–$15M",
+    "aum": "$16B+ AUM"
   },
   {
     "slug": "y-combinator",
@@ -69,7 +79,9 @@
     "sectors": ["AI/ML", "Consumer", "SaaS"],
     "knownFor": "Betting on the founder over the idea at the earliest possible stage, then compounding through the network.",
     "notableInvestments": ["Airbnb", "Stripe", "DoorDash", "Coinbase", "Reddit"],
-    "trendingRank": 6
+    "trendingRank": 6,
+    "checkSize": "$500K (7%)",
+    "aum": "Accelerator model"
   },
   {
     "slug": "general-catalyst",
@@ -81,7 +93,9 @@
     "sectors": ["Health", "AI/ML", "Climate"],
     "knownFor": "\"Responsible innovation\" thesis at the intersection of technology, healthcare, and resilience.",
     "notableInvestments": ["Stripe", "Samsara", "Livongo", "HubSpot", "Anduril"],
-    "trendingRank": 7
+    "trendingRank": 7,
+    "checkSize": "$5M–$100M+",
+    "aum": "$25B+ AUM"
   },
   {
     "slug": "lightspeed",
@@ -93,7 +107,9 @@
     "sectors": ["SaaS", "Fintech", "Consumer"],
     "knownFor": "Deep enterprise pattern recognition paired with founder-friendly terms and fast decision-making.",
     "notableInvestments": ["Affirm", "Rubrik", "Carta", "Faire", "Snap"],
-    "trendingRank": 8
+    "trendingRank": 8,
+    "checkSize": "$1M–$30M",
+    "aum": "$10B+ AUM"
   },
   {
     "slug": "20vc",
@@ -104,7 +120,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["Consumer", "SaaS", "Fintech"],
     "knownFor": "Builds founder trust through radically public conviction — the thesis is broadcast before the cheque.",
-    "notableInvestments": ["Calm", "Hopin", "Wayflyer"]
+    "notableInvestments": ["Calm", "Hopin", "Wayflyer", "Linear", "Linktree", "Sorare"],
+    "checkSize": "£100K–£1M",
+    "aum": "$600M+ AUM"
   },
   {
     "slug": "seedcamp",
@@ -115,7 +133,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "SaaS", "Fintech"],
     "knownFor": "Europe's original seed fund — first cheque into category leaders before consensus forms.",
-    "notableInvestments": ["Revolut", "UiPath", "Wise"]
+    "notableInvestments": ["Revolut", "UiPath", "Wise", "Pleo", "Typeform", "Sorare"],
+    "checkSize": "£25K–£500K",
+    "aum": "$500M+ AUM"
   },
   {
     "slug": "conviction",
@@ -126,7 +146,9 @@
     "stage": "Seed – Series A",
     "sectors": ["AI/ML", "SaaS", "Deep Tech"],
     "knownFor": "Pure AI-native focus with deep technical diligence and a hands-on operator network.",
-    "notableInvestments": ["Harvey", "Cursor", "Abridge"]
+    "notableInvestments": ["Harvey", "Cursor", "Abridge", "Mistral", "Sierra", "Baseten"],
+    "checkSize": "$1M–$10M",
+    "aum": "$330M AUM"
   },
   {
     "slug": "forerunner-ventures",
@@ -137,7 +159,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Consumer", "SaaS", "Health"],
     "knownFor": "Consumer behaviour-first investing — backs brands and platforms that change how people shop and live.",
-    "notableInvestments": ["Glossier", "Chime", "The Farmer's Dog"]
+    "notableInvestments": ["Glossier", "Chime", "Warby Parker", "Hims & Hers", "Dollar Shave Club", "Faire"],
+    "checkSize": "$500K–$20M",
+    "aum": "$2.5B+ AUM"
   },
   {
     "slug": "northzone",
@@ -148,7 +172,9 @@
     "stage": "Seed – Series C",
     "sectors": ["Fintech", "Climate", "SaaS"],
     "knownFor": "Nordic-rooted, pan-European conviction with a strong record in fintech and climate infrastructure.",
-    "notableInvestments": ["Spotify", "Klarna", "iZettle"]
+    "notableInvestments": ["Spotify", "Klarna", "iZettle", "Pleo", "Kahoot!", "Trustpilot"],
+    "checkSize": "€2M–€25M",
+    "aum": "€2B+ AUM"
   },
   {
     "slug": "founders-fund",
@@ -159,7 +185,9 @@
     "stage": "Seed – Growth",
     "sectors": ["Deep Tech", "AI/ML", "Crypto"],
     "knownFor": "Contrarian, mission-driven bets on hard technology — defence, space, and frontier infrastructure.",
-    "notableInvestments": ["SpaceX", "Anduril", "Palantir"]
+    "notableInvestments": ["SpaceX", "Anduril", "Palantir", "Stripe", "Lyft", "Airbnb"],
+    "checkSize": "$500K–$100M+",
+    "aum": "$11B+ AUM"
   },
   {
     "slug": "benchmark",
@@ -170,7 +198,9 @@
     "stage": "Series A",
     "sectors": ["Consumer", "Crypto", "SaaS"],
     "knownFor": "A deliberately small, all-equal-partner model built around a handful of category-defining Series A bets each year.",
-    "notableInvestments": ["Uber", "Snapchat", "Discord", "Dropbox", "Twitter"]
+    "notableInvestments": ["Uber", "Snapchat", "Discord", "Dropbox", "Twitter"],
+    "checkSize": "$5M–$15M",
+    "aum": "$1.3B+ AUM"
   },
   {
     "slug": "khosla-ventures",
@@ -181,7 +211,9 @@
     "stage": "Seed – Growth",
     "sectors": ["AI/ML", "Climate", "Health"],
     "knownFor": "Big, contrarian science bets on energy, AI, and healthcare alongside more conventional software deals.",
-    "notableInvestments": ["OpenAI", "Square", "Instacart", "DoorDash", "Impossible Foods"]
+    "notableInvestments": ["OpenAI", "Square", "Instacart", "DoorDash", "Impossible Foods"],
+    "checkSize": "$500K–$50M+",
+    "aum": "$15B+ AUM"
   },
   {
     "slug": "greylock-partners",
@@ -192,7 +224,9 @@
     "stage": "Seed – Series C",
     "sectors": ["AI/ML", "SaaS", "Consumer"],
     "knownFor": "Founder-led network effects investing — many of its own partners built the companies they now back.",
-    "notableInvestments": ["LinkedIn", "Airbnb", "Workday", "Discord", "Figma"]
+    "notableInvestments": ["LinkedIn", "Airbnb", "Workday", "Discord", "Figma"],
+    "checkSize": "$1M–$25M",
+    "aum": "$4.7B+ AUM"
   },
   {
     "slug": "bessemer-venture-partners",
@@ -203,7 +237,9 @@
     "stage": "Seed – Growth",
     "sectors": ["SaaS", "Fintech", "Health"],
     "knownFor": "One of the oldest VC firms in the world, known for its public 'cloud index' and deep enterprise SaaS pattern matching.",
-    "notableInvestments": ["Shopify", "Twilio", "Pinterest", "LinkedIn", "Toast"]
+    "notableInvestments": ["Shopify", "Twilio", "Pinterest", "LinkedIn", "Toast"],
+    "checkSize": "$1M–$50M+",
+    "aum": "$16B+ AUM"
   },
   {
     "slug": "nea",
@@ -214,7 +250,9 @@
     "stage": "Seed – Growth",
     "sectors": ["AI/ML", "Health", "Fintech"],
     "knownFor": "One of the largest venture funds globally, spanning tech and healthcare from seed through growth.",
-    "notableInvestments": ["Robinhood", "Databricks", "Cloudflare", "Coursera", "Houzz"]
+    "notableInvestments": ["Robinhood", "Databricks", "Cloudflare", "Coursera", "Houzz"],
+    "checkSize": "$1M–$100M+",
+    "aum": "$25B+ AUM"
   },
   {
     "slug": "gv",
@@ -225,7 +263,9 @@
     "stage": "Seed – Growth",
     "sectors": ["AI/ML", "Health", "Deep Tech"],
     "knownFor": "Alphabet's venture arm, pairing data-science diligence with deep technical and life-sciences expertise.",
-    "notableInvestments": ["Uber", "Stripe", "Duolingo", "23andMe", "Flatiron Health"]
+    "notableInvestments": ["Uber", "Stripe", "Duolingo", "23andMe", "Flatiron Health"],
+    "checkSize": "$250K–$50M",
+    "aum": "$3B+ AUM"
   },
   {
     "slug": "first-round-capital",
@@ -236,7 +276,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["SaaS", "Consumer", "Fintech"],
     "knownFor": "Hands-on first-cheque investing with an outsized founder community and operating-support network.",
-    "notableInvestments": ["Notion", "Roblox", "Uber", "Square", "Looker"]
+    "notableInvestments": ["Notion", "Roblox", "Uber", "Square", "Looker"],
+    "checkSize": "$1M–$5M",
+    "aum": "$3B+ AUM"
   },
   {
     "slug": "thrive-capital",
@@ -247,7 +289,9 @@
     "stage": "Series A – Growth",
     "sectors": ["AI/ML", "Fintech", "Consumer"],
     "knownFor": "Concentrated, high-conviction bets held across multiple funding rounds of the same breakout companies.",
-    "notableInvestments": ["OpenAI", "Stripe", "Instagram", "Unity", "Ramp"]
+    "notableInvestments": ["OpenAI", "Stripe", "Instagram", "Unity", "Ramp"],
+    "checkSize": "$5M–$150M+",
+    "aum": "$5B+ AUM"
   },
   {
     "slug": "coatue-management",
@@ -258,7 +302,9 @@
     "stage": "Series B – Growth",
     "sectors": ["AI/ML", "SaaS", "Fintech"],
     "knownFor": "Crossover hedge fund and growth investor that moves fast and writes large cheques into category leaders.",
-    "notableInvestments": ["Snowflake", "Databricks", "ByteDance", "Stripe", "ServiceTitan"]
+    "notableInvestments": ["Snowflake", "Databricks", "ByteDance", "Stripe", "ServiceTitan"],
+    "checkSize": "$10M–$500M+",
+    "aum": "$50B+ AUM"
   },
   {
     "slug": "tiger-global-management",
@@ -269,7 +315,9 @@
     "stage": "Series B – Growth",
     "sectors": ["AI/ML", "Fintech", "Consumer"],
     "knownFor": "Globally aggressive growth investor known for speed, scale, and a wide international footprint.",
-    "notableInvestments": ["Spotify", "Peloton", "ByteDance", "Flipkart", "Stripe"]
+    "notableInvestments": ["Spotify", "Peloton", "ByteDance", "Flipkart", "Stripe"],
+    "checkSize": "$5M–$500M+",
+    "aum": "$50B+ AUM"
   },
   {
     "slug": "insight-partners",
@@ -280,7 +328,9 @@
     "stage": "Series B – Growth",
     "sectors": ["SaaS", "AI/ML", "Fintech"],
     "knownFor": "ScaleUp software investor with an in-house team dedicated to post-investment operational support.",
-    "notableInvestments": ["Twitter", "Shopify", "Monday.com", "Wiz", "HelloFresh"]
+    "notableInvestments": ["Twitter", "Shopify", "Monday.com", "Wiz", "HelloFresh"],
+    "checkSize": "$10M–$200M",
+    "aum": "$90B+ AUM"
   },
   {
     "slug": "battery-ventures",
@@ -291,7 +341,9 @@
     "stage": "Seed – Growth",
     "sectors": ["SaaS", "Deep Tech", "Fintech"],
     "knownFor": "Multi-stage investor spanning infrastructure software, industrial tech, and applications.",
-    "notableInvestments": ["Wayfair", "Glassdoor", "Splunk", "Coupa", "Bloomreach"]
+    "notableInvestments": ["Wayfair", "Glassdoor", "Splunk", "Coupa", "Bloomreach"],
+    "checkSize": "$1M–$50M",
+    "aum": "$13B+ AUM"
   },
   {
     "slug": "spark-capital",
@@ -302,7 +354,9 @@
     "stage": "Seed – Series C",
     "sectors": ["Consumer", "AI/ML", "Gaming"],
     "knownFor": "Media- and consumer-savvy early-stage investor with a strong track record in social platforms.",
-    "notableInvestments": ["Twitter", "Discord", "Slack", "Affirm", "Cruise"]
+    "notableInvestments": ["Twitter", "Discord", "Slack", "Affirm", "Cruise"],
+    "checkSize": "$1M–$15M",
+    "aum": "$3B+ AUM"
   },
   {
     "slug": "union-square-ventures",
@@ -313,7 +367,9 @@
     "stage": "Seed – Series A",
     "sectors": ["Crypto", "Consumer", "SaaS"],
     "knownFor": "Thesis-driven 'networks' investor with small, focused funds and long partner tenure.",
-    "notableInvestments": ["Twitter", "Etsy", "Coinbase", "Cloudflare", "Duolingo"]
+    "notableInvestments": ["Twitter", "Etsy", "Coinbase", "Cloudflare", "Duolingo"],
+    "checkSize": "$1M–$5M",
+    "aum": "$1B+ AUM"
   },
   {
     "slug": "crv",
@@ -324,7 +380,9 @@
     "stage": "Seed – Series B",
     "sectors": ["SaaS", "Consumer", "Fintech"],
     "knownFor": "One of the oldest Silicon Valley firms, with a long history of enterprise software and consumer wins.",
-    "notableInvestments": ["DoorDash", "Patreon", "Yelp", "Airtable", "Sphero"]
+    "notableInvestments": ["DoorDash", "Patreon", "Yelp", "Airtable", "Sphero"],
+    "checkSize": "$1M–$20M",
+    "aum": "$4B+ AUM"
   },
   {
     "slug": "redpoint-ventures",
@@ -335,7 +393,9 @@
     "stage": "Seed – Series B",
     "sectors": ["SaaS", "Fintech", "AI/ML"],
     "knownFor": "Data-driven enterprise and consumer investor known for publishing detailed SaaS benchmarks.",
-    "notableInvestments": ["Netflix", "Twilio", "Looker", "Stripe", "HashiCorp"]
+    "notableInvestments": ["Netflix", "Twilio", "Looker", "Stripe", "HashiCorp"],
+    "checkSize": "$500K–$30M",
+    "aum": "$5B+ AUM"
   },
   {
     "slug": "ggv-capital",
@@ -345,8 +405,10 @@
     "region": "Global",
     "stage": "Series A – Growth",
     "sectors": ["SaaS", "Consumer", "Fintech"],
-    "knownFor": "Cross-border investor connecting US, Asia, and global founders to growth-stage capital.",
-    "notableInvestments": ["Airbnb", "Slack", "Square", "Affirm", "Wish"]
+    "knownFor": "Cross-border investor connecting US and Asia founders to growth-stage capital (now operating as Notable Capital in the US).",
+    "notableInvestments": ["Airbnb", "Slack", "Square", "Affirm", "Wish"],
+    "checkSize": "$1M–$50M",
+    "aum": "$9B+ AUM"
   },
   {
     "slug": "ivp",
@@ -357,7 +419,9 @@
     "stage": "Growth",
     "sectors": ["SaaS", "Consumer", "Fintech"],
     "knownFor": "Late-stage growth specialist that writes large, pre-IPO cheques into already-proven companies.",
-    "notableInvestments": ["Snap", "Slack", "Dropbox", "Twitter", "Datadog"]
+    "notableInvestments": ["Snap", "Slack", "Dropbox", "Twitter", "Datadog"],
+    "checkSize": "$10M–$150M",
+    "aum": "$10B+ AUM"
   },
   {
     "slug": "craft-ventures",
@@ -368,18 +432,22 @@
     "stage": "Seed – Series B",
     "sectors": ["SaaS", "Fintech", "AI/ML"],
     "knownFor": "Operator-led fund founded by former PayPal and Yammer executives, focused on enterprise SaaS go-to-market.",
-    "notableInvestments": ["SpaceX", "Reddit", "Affirm", "Slack", "Postmates"]
+    "notableInvestments": ["SpaceX", "Reddit", "Affirm", "Slack", "Postmates"],
+    "checkSize": "$1M–$15M",
+    "aum": "$1.5B+ AUM"
   },
   {
     "slug": "initialized-capital",
     "firm": "Initialized Capital",
-    "partner": "Garry Tan",
+    "partner": "Brett Gibson",
     "location": "San Francisco, US",
     "region": "US",
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "Consumer", "SaaS"],
     "knownFor": "Founder-led seed fund built on a network of YC alumni and first-time technical founders.",
-    "notableInvestments": ["Coinbase", "Instacart", "Patreon", "Flexport", "Opendoor"]
+    "notableInvestments": ["Coinbase", "Instacart", "Patreon", "Flexport", "Opendoor"],
+    "checkSize": "$100K–$1M",
+    "aum": "$800M+ AUM"
   },
   {
     "slug": "sv-angel",
@@ -390,7 +458,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "Consumer", "SaaS"],
     "knownFor": "Legendary seed-stage angel fund with one of the deepest founder networks in Silicon Valley.",
-    "notableInvestments": ["Google", "PayPal", "Twitter", "Airbnb", "Pinterest"]
+    "notableInvestments": ["Google", "PayPal", "Twitter", "Airbnb", "Pinterest"],
+    "checkSize": "$25K–$500K",
+    "aum": "$200M+ AUM"
   },
   {
     "slug": "dcvc",
@@ -401,7 +471,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Deep Tech", "AI/ML", "Climate"],
     "knownFor": "Deep-tech specialist backing computational science, frontier AI, and industrial transformation.",
-    "notableInvestments": ["Planet Labs", "Mysten Labs", "Pivot Bio", "Carbon Robotics", "Saildrone"]
+    "notableInvestments": ["Planet Labs", "Mysten Labs", "Pivot Bio", "Carbon Robotics", "Saildrone"],
+    "checkSize": "$2M–$20M",
+    "aum": "$2.5B+ AUM"
   },
   {
     "slug": "lux-capital",
@@ -412,7 +484,9 @@
     "stage": "Seed – Growth",
     "sectors": ["Deep Tech", "AI/ML", "Health"],
     "knownFor": "Science-fiction-inspired bets on frontier technology — robotics, space, and synthetic biology.",
-    "notableInvestments": ["Anduril", "Varda Space", "Hadrian", "Resilience", "Desktop Metal"]
+    "notableInvestments": ["Anduril", "Varda Space", "Hadrian", "Resilience", "Desktop Metal"],
+    "checkSize": "$1M–$30M",
+    "aum": "$5B+ AUM"
   },
   {
     "slug": "bain-capital-ventures",
@@ -423,7 +497,9 @@
     "stage": "Seed – Growth",
     "sectors": ["SaaS", "Fintech", "Health"],
     "knownFor": "Enterprise-software-focused arm of Bain Capital with deep go-to-market and operating resources.",
-    "notableInvestments": ["DocuSign", "SurveyMonkey", "Attentive", "Rapid7", "LinkedIn"]
+    "notableInvestments": ["DocuSign", "SurveyMonkey", "Attentive", "Rapid7", "LinkedIn"],
+    "checkSize": "$5M–$50M",
+    "aum": "$4B+ AUM"
   },
   {
     "slug": "menlo-ventures",
@@ -434,7 +510,9 @@
     "stage": "Seed – Growth",
     "sectors": ["AI/ML", "SaaS", "Consumer"],
     "knownFor": "Multi-decade Silicon Valley fund with a recent strong push into applied AI and infrastructure.",
-    "notableInvestments": ["Uber", "Roku", "Anthropic", "Siri", "Carta"]
+    "notableInvestments": ["Uber", "Roku", "Anthropic", "Siri", "Carta"],
+    "checkSize": "$1M–$25M",
+    "aum": "$1.35B+ AUM"
   },
   {
     "slug": "mayfield-fund",
@@ -445,7 +523,9 @@
     "stage": "Seed – Series B",
     "sectors": ["AI/ML", "SaaS", "Deep Tech"],
     "knownFor": "Founder-first early-stage fund with a 'people first' investing philosophy spanning five decades.",
-    "notableInvestments": ["HashiCorp", "Lyft", "Poshmark", "SolarWinds", "Outreach"]
+    "notableInvestments": ["HashiCorp", "Lyft", "Poshmark", "SolarWinds", "Outreach"],
+    "checkSize": "$500K–$15M",
+    "aum": "$2.8B+ AUM"
   },
   {
     "slug": "true-ventures",
@@ -456,7 +536,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "Consumer", "SaaS"],
     "knownFor": "Founder-community-driven seed fund offering an extensive in-house support platform.",
-    "notableInvestments": ["Peloton", "Fitbit", "Blue Bottle Coffee", "Ring", "Automattic"]
+    "notableInvestments": ["Peloton", "Fitbit", "Blue Bottle Coffee", "Ring", "Automattic"],
+    "checkSize": "$1M–$5M",
+    "aum": "$2.5B+ AUM"
   },
   {
     "slug": "general-atlantic",
@@ -467,7 +549,9 @@
     "stage": "Growth",
     "sectors": ["Fintech", "SaaS", "Consumer"],
     "knownFor": "Global growth-equity firm investing at scale across mature, fast-growing tech businesses.",
-    "notableInvestments": ["Slack", "Airbnb", "ByteDance", "Klarna", "Snowflake"]
+    "notableInvestments": ["Slack", "Airbnb", "ByteDance", "Klarna", "Snowflake"],
+    "checkSize": "$50M–$500M",
+    "aum": "$80B+ AUM"
   },
   {
     "slug": "paradigm",
@@ -478,7 +562,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Crypto", "Deep Tech", "Fintech"],
     "knownFor": "Crypto-native investor and research lab building deep technical relationships with protocol teams.",
-    "notableInvestments": ["Uniswap", "OpenSea", "FTX", "Optimism", "dYdX"]
+    "notableInvestments": ["Uniswap", "OpenSea", "Blur", "Optimism", "dYdX"],
+    "checkSize": "$500K–$50M",
+    "aum": "$2.5B+ AUM"
   },
   {
     "slug": "polychain-capital",
@@ -489,7 +575,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Crypto", "Fintech", "Deep Tech"],
     "knownFor": "One of the earliest crypto-only investment firms, focused on protocol tokens and infrastructure.",
-    "notableInvestments": ["Coinbase", "Compound", "Celo", "dYdX", "Tezos"]
+    "notableInvestments": ["Coinbase", "Compound", "Celo", "dYdX", "Tezos"],
+    "checkSize": "$500K–$15M",
+    "aum": "$1.5B+ AUM"
   },
   {
     "slug": "pantera-capital",
@@ -500,7 +588,9 @@
     "stage": "Seed – Growth",
     "sectors": ["Crypto", "Fintech", "Deep Tech"],
     "knownFor": "First US blockchain-focused investment firm, spanning early-stage tokens through liquid funds.",
-    "notableInvestments": ["Ripple", "Circle", "Polkadot", "Coinbase", "1inch"]
+    "notableInvestments": ["Ripple", "Circle", "Polkadot", "Coinbase", "1inch"],
+    "checkSize": "$1M–$50M",
+    "aum": "$5.8B+ AUM"
   },
   {
     "slug": "bitkraft-ventures",
@@ -511,7 +601,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Gaming", "Consumer", "Crypto"],
     "knownFor": "Dedicated games, esports, and interactive media investor with deep industry operating ties.",
-    "notableInvestments": ["Unity", "FaZe Clan", "Sorare", "Wemade", "Mythical Games"]
+    "notableInvestments": ["Unity", "FaZe Clan", "Sorare", "Wemade", "Mythical Games"],
+    "checkSize": "$500K–$5M",
+    "aum": "$375M+ AUM"
   },
   {
     "slug": "flare-capital-partners",
@@ -522,7 +614,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Health", "AI/ML", "SaaS"],
     "knownFor": "Healthcare-IT specialist backing digital health platforms working with payers and providers.",
-    "notableInvestments": ["Iora Health", "Circulation", "Strive Health", "Memora Health", "Cohere Health"]
+    "notableInvestments": ["Iora Health", "Circulation", "Strive Health", "Memora Health", "Cohere Health"],
+    "checkSize": "$2M–$15M",
+    "aum": "$400M+ AUM"
   },
   {
     "slug": "7wireventures",
@@ -533,7 +627,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Health", "Fintech", "SaaS"],
     "knownFor": "Consumer-centric healthcare investor focused on engagement and care-navigation platforms.",
-    "notableInvestments": ["Livongo", "Clarify Health", "SteadyMD", "Evidation Health", "Particle Health"]
+    "notableInvestments": ["Livongo", "Clarify Health", "SteadyMD", "Evidation Health", "Particle Health"],
+    "checkSize": "$2M–$15M",
+    "aum": "$850M+ AUM"
   },
   {
     "slug": "breakthrough-energy-ventures",
@@ -544,7 +640,9 @@
     "stage": "Series A – Growth",
     "sectors": ["Climate", "Deep Tech", "AI/ML"],
     "knownFor": "Patient, mission-driven capital for technologies that can meaningfully cut global emissions.",
-    "notableInvestments": ["QuantumScape", "Form Energy", "Commonwealth Fusion Systems", "Pivot Bio", "Boston Metal"]
+    "notableInvestments": ["QuantumScape", "Form Energy", "Commonwealth Fusion Systems", "Pivot Bio", "Boston Metal"],
+    "checkSize": "$10M–$100M+",
+    "aum": "$2B+ AUM"
   },
   {
     "slug": "lowercarbon-capital",
@@ -555,7 +653,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Climate", "Deep Tech", "AI/ML"],
     "knownFor": "Fast-moving climate-tech fund backing unglamorous but high-leverage decarbonisation bets.",
-    "notableInvestments": ["Watershed", "CarbonCure", "Charm Industrial", "Form Energy", "Boom Supersonic"]
+    "notableInvestments": ["Watershed", "CarbonCure", "Charm Industrial", "Form Energy", "Boom Supersonic"],
+    "checkSize": "$500K–$20M",
+    "aum": "$800M+ AUM"
   },
   {
     "slug": "eclipse-ventures",
@@ -566,7 +666,9 @@
     "stage": "Seed – Series C",
     "sectors": ["Deep Tech", "AI/ML", "Climate"],
     "knownFor": "Industrial-tech investor pairing software with physical operations across manufacturing and supply chains.",
-    "notableInvestments": ["Bright Machines", "Cerebras", "Bowery Farming", "Source Energy", "Apeel Sciences"]
+    "notableInvestments": ["Bright Machines", "Cerebras", "Bowery Farming", "Source Energy", "Apeel Sciences"],
+    "checkSize": "$1M–$20M",
+    "aum": "$1.3B+ AUM"
   },
   {
     "slug": "radical-ventures",
@@ -577,7 +679,9 @@
     "stage": "Seed – Series B",
     "sectors": ["AI/ML", "Deep Tech", "Health"],
     "knownFor": "AI-focused fund built with leading machine-learning researchers as venture partners.",
-    "notableInvestments": ["Cohere", "Covariant", "Tempus AI", "Waabi", "Deep Genomics"]
+    "notableInvestments": ["Cohere", "Covariant", "Tempus AI", "Waabi", "Deep Genomics"],
+    "checkSize": "$1M–$10M",
+    "aum": "$550M+ AUM"
   },
   {
     "slug": "aix-ventures",
@@ -588,7 +692,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "Deep Tech", "SaaS"],
     "knownFor": "Seed fund run by AI researchers and operators, focused exclusively on applied-AI founding teams.",
-    "notableInvestments": ["Imbue", "Brightwave", "Sully.ai", "Nominal", "Pienso"]
+    "notableInvestments": ["Imbue", "Brightwave", "Sully.ai", "Nominal", "Pienso"],
+    "checkSize": "$100K–$1M",
+    "aum": "$55M+ AUM"
   },
   {
     "slug": "qed-investors",
@@ -599,7 +705,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Fintech", "SaaS", "AI/ML"],
     "knownFor": "Fintech-only investor founded by Capital One's co-founder, with deep underwriting and risk expertise.",
-    "notableInvestments": ["Nubank", "Credit Karma", "Klarna", "SoFi", "AvidXchange"]
+    "notableInvestments": ["Nubank", "Credit Karma", "Klarna", "SoFi", "AvidXchange"],
+    "checkSize": "$1M–$15M",
+    "aum": "$1.3B+ AUM"
   },
   {
     "slug": "ribbit-capital",
@@ -610,7 +718,9 @@
     "stage": "Seed – Growth",
     "sectors": ["Fintech", "AI/ML", "Crypto"],
     "knownFor": "Fintech specialist backing category leaders that rebuild financial services from the ground up.",
-    "notableInvestments": ["Robinhood", "Coinbase", "Revolut", "Nubank", "Affirm"]
+    "notableInvestments": ["Robinhood", "Coinbase", "Revolut", "Nubank", "Affirm"],
+    "checkSize": "$2M–$50M+",
+    "aum": "$2.4B+ AUM"
   },
   {
     "slug": "atomico",
@@ -621,7 +731,9 @@
     "stage": "Series A – Growth",
     "sectors": ["SaaS", "Consumer", "AI/ML"],
     "knownFor": "Founded by Skype's co-founder, backing ambitious European technology companies at scale.",
-    "notableInvestments": ["Klarna", "Supercell", "Stripe", "Wolt", "Lilium"]
+    "notableInvestments": ["Klarna", "Supercell", "Stripe", "Wolt", "Lilium"],
+    "checkSize": "€5M–€50M",
+    "aum": "€3.3B+ AUM"
   },
   {
     "slug": "octopus-ventures",
@@ -632,7 +744,9 @@
     "stage": "Seed – Series B",
     "sectors": ["Health", "Fintech", "SaaS"],
     "knownFor": "One of Europe's most active early-stage investors, spanning fintech, health, and deep tech.",
-    "notableInvestments": ["Zoopla", "Secret Escapes", "Cazoo", "Depop", "Magic Pony Technology"]
+    "notableInvestments": ["Zoopla", "Secret Escapes", "Cazoo", "Depop", "Magic Pony Technology"],
+    "checkSize": "£500K–£10M",
+    "aum": "£2B+ AUM"
   },
   {
     "slug": "eqt-ventures",
@@ -643,7 +757,9 @@
     "stage": "Seed – Series C",
     "sectors": ["SaaS", "AI/ML", "Fintech"],
     "knownFor": "Backed by a major European private-equity house, combining venture speed with growth-stage resources.",
-    "notableInvestments": ["Wolt", "Northvolt", "Peakon", "Lime", "Anyfin"]
+    "notableInvestments": ["Wolt", "Northvolt", "Peakon", "Lime", "Anyfin"],
+    "checkSize": "€2M–€20M",
+    "aum": "€2B+ AUM"
   },
   {
     "slug": "creandum",
@@ -654,7 +770,9 @@
     "stage": "Seed – Series B",
     "sectors": ["SaaS", "Consumer", "AI/ML"],
     "knownFor": "Nordic-rooted early-stage investor with a strong record of European companies going global.",
-    "notableInvestments": ["Spotify", "Klarna", "Pinterest", "Small Giant Games", "Vinted"]
+    "notableInvestments": ["Spotify", "Klarna", "Pinterest", "Small Giant Games", "Vinted"],
+    "checkSize": "€500K–€8M",
+    "aum": "€700M+ AUM"
   },
   {
     "slug": "point-nine-capital",
@@ -665,7 +783,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["SaaS", "Fintech", "Consumer"],
     "knownFor": "B2B SaaS and marketplace specialist known for being one of the earliest cheques into category leaders.",
-    "notableInvestments": ["Zendesk", "Delivery Hero", "Algolia", "Contentful", "Revolut"]
+    "notableInvestments": ["Zendesk", "Delivery Hero", "Algolia", "Contentful", "Revolut"],
+    "checkSize": "€100K–€2M",
+    "aum": "€350M+ AUM"
   },
   {
     "slug": "cherry-ventures",
@@ -676,7 +796,9 @@
     "stage": "Pre-seed – Series A",
     "sectors": ["SaaS", "Consumer", "Fintech"],
     "knownFor": "Founder-led German fund built by serial entrepreneurs, focused on category-defining early bets.",
-    "notableInvestments": ["Flixbus", "Auto1", "Forto", "Persona", "Pleo"]
+    "notableInvestments": ["Flixbus", "Auto1", "Forto", "Persona", "Pleo"],
+    "checkSize": "€300K–€3M",
+    "aum": "€260M+ AUM"
   },
   {
     "slug": "speedinvest",
@@ -687,7 +809,9 @@
     "stage": "Pre-seed – Series A",
     "sectors": ["Fintech", "SaaS", "Deep Tech"],
     "knownFor": "Pan-European seed fund with dedicated sector teams covering fintech, deep tech, and industrial tech.",
-    "notableInvestments": ["Wefox", "Bitpanda", "Tourlane", "Adverity", "Vienna Insurance Group"]
+    "notableInvestments": ["Wefox", "Bitpanda", "Tourlane", "Adverity", "Curve"],
+    "checkSize": "€250K–€3M",
+    "aum": "€700M+ AUM"
   },
   {
     "slug": "lakestar",
@@ -698,7 +822,9 @@
     "stage": "Seed – Series C",
     "sectors": ["AI/ML", "Fintech", "SaaS"],
     "knownFor": "Pan-European multi-stage investor with early bets on some of the continent's biggest exits.",
-    "notableInvestments": ["Spotify", "Skype", "Revolut", "N26", "OpenAI"]
+    "notableInvestments": ["Spotify", "Skype", "Revolut", "N26", "OpenAI"],
+    "checkSize": "€2M–€30M",
+    "aum": "€1.2B+ AUM"
   },
   {
     "slug": "hv-capital",
@@ -709,7 +835,9 @@
     "stage": "Seed – Growth",
     "sectors": ["Consumer", "SaaS", "Fintech"],
     "knownFor": "One of Europe's largest and longest-running venture funds, spanning seed through pre-IPO.",
-    "notableInvestments": ["Zalando", "Delivery Hero", "FlixBus", "Depop", "Isar Aerospace"]
+    "notableInvestments": ["Zalando", "Delivery Hero", "FlixBus", "Depop", "Isar Aerospace"],
+    "checkSize": "€2M–€30M",
+    "aum": "€3B+ AUM"
   },
   {
     "slug": "project-a-ventures",
@@ -720,7 +848,9 @@
     "stage": "Pre-seed – Series A",
     "sectors": ["SaaS", "Consumer", "Deep Tech"],
     "knownFor": "Operational venture fund providing in-house product, growth, and engineering teams to portfolio companies.",
-    "notableInvestments": ["Trade Republic", "Catawiki", "Spryker", "Sennder", "KoRo"]
+    "notableInvestments": ["Trade Republic", "Catawiki", "Spryker", "Sennder", "KoRo"],
+    "checkSize": "€2M–€15M",
+    "aum": "€600M+ AUM"
   },
   {
     "slug": "hoxton-ventures",
@@ -731,7 +861,9 @@
     "stage": "Seed – Series A",
     "sectors": ["Consumer", "AI/ML", "SaaS"],
     "knownFor": "Early backer of breakout European consumer and AI startups, often the first US-style seed cheque.",
-    "notableInvestments": ["Deliveroo", "Babylon Health", "Darktrace", "Mobalytics", "Strava"]
+    "notableInvestments": ["Deliveroo", "Babylon Health", "Darktrace", "Mobalytics", "Strava"],
+    "checkSize": "£250K–£2M",
+    "aum": "£100M+ AUM"
   },
   {
     "slug": "notion-capital",
@@ -742,7 +874,9 @@
     "stage": "Seed – Series B",
     "sectors": ["SaaS", "Fintech", "AI/ML"],
     "knownFor": "B2B SaaS specialist founded by serial SaaS entrepreneurs, focused on cloud and enterprise software.",
-    "notableInvestments": ["Currencycloud", "Mews", "Paddle", "GoCardless", "Tray.io"]
+    "notableInvestments": ["Currencycloud", "Mews", "Paddle", "GoCardless", "Tray.io"],
+    "checkSize": "£1M–£8M",
+    "aum": "£400M+ AUM"
   },
   {
     "slug": "kindred-capital",
@@ -753,7 +887,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "Fintech", "SaaS"],
     "knownFor": "'Equitable venture' fund that gives founders equity in the fund itself alongside their first cheque.",
-    "notableInvestments": ["Moonpig", "Habito", "Five AI", "CurrencyCloud", "Lifted Logic"]
+    "notableInvestments": ["Moonpig", "Habito", "Five AI", "CurrencyCloud", "Lifted Logic"],
+    "checkSize": "£250K–£2M",
+    "aum": "£120M+ AUM"
   },
   {
     "slug": "latitude",
@@ -764,7 +900,9 @@
     "stage": "Pre-seed – Seed",
     "sectors": ["AI/ML", "Consumer", "SaaS"],
     "knownFor": "London-rooted seed specialist with one of the deepest networks of UK founders and category leaders.",
-    "notableInvestments": ["Wise", "Citymapper", "Improbable", "Wayve", "Tide"]
+    "notableInvestments": ["Wise", "Citymapper", "Improbable", "Wayve", "Tide"],
+    "checkSize": "£100K–£2M",
+    "aum": "£750M+ AUM"
   },
   {
     "slug": "london-venture-partners",
@@ -775,6 +913,8 @@
     "stage": "Seed – Series A",
     "sectors": ["Gaming", "Consumer", "AI/ML"],
     "knownFor": "Games-only investor with deep operating relationships across mobile, PC, and console studios.",
-    "notableInvestments": ["Supercell", "Tilting Point", "Space Ape Games", "Mojang", "Improbable"]
+    "notableInvestments": ["Supercell", "Tilting Point", "Space Ape Games", "Mojang", "Improbable"],
+    "checkSize": "£300K–£3M",
+    "aum": "£280M+ AUM"
   }
 ]

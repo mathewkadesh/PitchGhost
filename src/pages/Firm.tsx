@@ -59,6 +59,18 @@ export default function Firm() {
             ))}
           </div>
         </div>
+        {v.checkSize && (
+          <div>
+            <p className="meta-label text-ink-soft">Typical check</p>
+            <p className="mt-2 text-ink">{v.checkSize}</p>
+          </div>
+        )}
+        {v.aum && (
+          <div>
+            <p className="meta-label text-ink-soft">Fund size</p>
+            <p className="mt-2 text-ink">{v.aum}</p>
+          </div>
+        )}
       </div>
 
       <section className="mt-8">
