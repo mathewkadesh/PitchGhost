@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, Navigate, useLocation, useParams } from "react-router-dom";
 import Dossier from "../components/Dossier";
 import ErrorState from "../components/ErrorState";
 import LoadingDossier from "../components/LoadingDossier";
 import { getDirectoryEntry } from "../data/vcDirectory";
+import { isSampleSlug } from "../lib/constants";
 import { runGhost } from "../lib/ghost";
 import type { Dossier as DossierData, GhostRequestInput } from "../lib/types";
 
@@ -11,14 +12,20 @@ export default function Research() {
   const { slug } = useParams<{ slug: string }>();
   const location = useLocation();
 
+  // For non-sample directory firms, redirect to the offline profile page
+  // so we never try to call the live research worker for them.
+  const redirectToFirm =
+    slug && slug !== "custom" && !isSampleSlug(slug) && Boolean(getDirectoryEntry(slug));
+
   const input = useMemo<GhostRequestInput | undefined>(() => {
+    if (redirectToFirm) return undefined;
     if (slug === "custom") {
       const state = location.state as { input?: GhostRequestInput } | null;
       return state?.input;
     }
     const entry = slug ? getDirectoryEntry(slug) : undefined;
     return entry ? { firm: entry.firm, partner: entry.partner } : undefined;
-  }, [slug, location.state]);
+  }, [slug, location.state, redirectToFirm]);
 
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
   const [dossier, setDossier] = useState<DossierData>();
@@ -44,6 +51,10 @@ export default function Research() {
   useEffect(() => {
     load();
   }, [load, attempt]);
+
+  if (redirectToFirm) {
+    return <Navigate to={`/firm/${slug}`} replace />;
+  }
 
   if (!input) {
     return (

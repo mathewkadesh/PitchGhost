@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { cityCoords } from "../data/cityCoords";
+import { isSampleSlug } from "../lib/constants";
 import type { VcDirectoryEntry } from "../lib/types";
 
 interface Props {
@@ -75,7 +76,8 @@ export default function VcMap({ vcs }: Props) {
           a.addEventListener("click", (ev) => {
             ev.preventDefault();
             map.closePopup();
-            navigate(`/research/${a.dataset.slug}`);
+            const s = a.dataset.slug!;
+            navigate(isSampleSlug(s) ? `/research/${s}` : `/firm/${s}`);
           });
         });
       });
