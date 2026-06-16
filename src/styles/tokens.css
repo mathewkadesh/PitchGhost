@@ -23,44 +23,6 @@
   --animate-cursor: cursor-blink 0.9s step-end infinite;
 }
 
-/* ----------------------------------------------------------------------
-   Light theme overrides. Deliberately unlayered (not inside @layer), so
-   these win over the @theme color variables (which Tailwind places in
-   @layer theme) regardless of selector specificity — CSS cascade layers
-   always rank unlayered rules above layered ones.
-   Same colour pairs are checked against WCAG AA (4.5:1) for text on --bg
-   and --panel.
-   ---------------------------------------------------------------------- */
-[data-theme="light"] {
-  --color-bg: #f7f4ec;
-  --color-panel: #ffffff;
-  --color-ink: #1f1d18;
-  --color-ink-soft: #6b6353;
-  --color-gold: #8a661a;
-  --color-line: #e4ded0;
-  --color-ok: #2f7d4f;
-  --color-warn: #b34e26;
-}
-
-html[data-theme="light"] {
-  color-scheme: light;
-}
-
-[data-theme="light"] .hairline-grid {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
-}
-
-[data-theme="light"] .scanlines::before {
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.02),
-    rgba(0, 0, 0, 0.02) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-}
 
 @keyframes scan {
   from {

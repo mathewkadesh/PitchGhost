@@ -1,11 +1,11 @@
 import { animate, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { regionOptions, sectorOptions, vcDirectory } from "../data/vcDirectory";
 
 const STATS = [
-  { label: "Firms tracked", value: vcDirectory.length },
-  { label: "Sectors covered", value: sectorOptions.length },
-  { label: "Regions", value: regionOptions.length },
+  { label: "Firms tracked",  value: 72 },
+  { label: "Sectors",        value: 14 },
+  { label: "Regions",        value: 4  },
+  { label: "Full dossiers",  value: 8  },
 ];
 
 function CountUp({ value }: { value: number }) {
@@ -27,11 +27,10 @@ function CountUp({ value }: { value: number }) {
   return <span ref={ref}>{display}</span>;
 }
 
-/** Animated "at a glance" numbers for the directory dataset, shown on the homepage. */
 export default function StatsStrip() {
   return (
     <section className="border-b border-line">
-      <div className="mx-auto grid max-w-6xl grid-cols-3 gap-4 px-4 py-10 sm:px-6">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-4 px-4 py-10 sm:grid-cols-4 sm:px-6">
         {STATS.map((stat) => (
           <div key={stat.label} className="text-center">
             <p className="font-display text-4xl text-gold sm:text-5xl">

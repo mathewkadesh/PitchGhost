@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useTheme, type Theme } from "../lib/themeContext";
 import Wordmark from "./Wordmark";
 
 const NAV_LINKS = [
@@ -9,43 +8,8 @@ const NAV_LINKS = [
   { to: "/blog", label: "Briefings" },
 ];
 
-const THEMES: { value: Theme; label: string }[] = [
-  { value: "dark", label: "Dark" },
-  { value: "light", label: "Light" },
-];
-
 function linkClass({ isActive }: { isActive: boolean }) {
   return `meta-label transition-colors ${isActive ? "text-gold" : "text-ink-soft hover:text-ink"}`;
-}
-
-export function ThemeToggle({ className = "" }: { className?: string }) {
-  const { theme, setTheme } = useTheme();
-
-  return (
-    <div
-      role="radiogroup"
-      aria-label="Color theme"
-      className={`meta-label inline-flex rounded-full border border-line p-0.5 ${className}`}
-    >
-      {THEMES.map((option) => {
-        const active = option.value === theme;
-        return (
-          <button
-            key={option.value}
-            type="button"
-            role="radio"
-            aria-checked={active}
-            onClick={() => setTheme(option.value)}
-            className={`rounded-full px-3 py-1 transition-colors ${
-              active ? "bg-gold text-bg" : "text-ink-soft hover:text-ink"
-            }`}
-          >
-            {option.label}
-          </button>
-        );
-      })}
-    </div>
-  );
 }
 
 export default function NavBar() {
@@ -65,10 +29,6 @@ export default function NavBar() {
             </NavLink>
           ))}
         </nav>
-
-        <div className="hidden items-center gap-3 md:flex">
-          <ThemeToggle />
-        </div>
 
         <button
           type="button"
@@ -96,9 +56,6 @@ export default function NavBar() {
               </NavLink>
             ))}
           </nav>
-          <div className="mt-4 flex flex-wrap items-center gap-3">
-            <ThemeToggle />
-          </div>
         </div>
       )}
     </header>
