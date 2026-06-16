@@ -20,7 +20,7 @@ interface VcRowProps {
 export default function VcRow({ slug, firm, partner, stage, sectors, rank, location, knownFor, index = 0 }: VcRowProps) {
   return (
     <Link
-      to={`/research/${slug}`}
+      to={isSampleSlug(slug) ? `/research/${slug}` : `/firm/${slug}`}
       style={{ animationDelay: `${Math.min(index, 10) * 45}ms` }}
       className="scan-reveal group flex flex-col gap-3 border-b border-line py-5 transition-colors hover:bg-panel sm:flex-row sm:items-center sm:gap-6 sm:px-4"
     >
